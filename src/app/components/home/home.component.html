@@ -1,0 +1,26 @@
+<div class="main">
+<h2>Ajouter une nouvelle tâche</h2> 
+
+<div class="row">
+    <div class="col-md-8 col-sm-12">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Nouvelle tâche" aria-label="newTask" aria-describedby="button-addon2" [(ngModel)]="addedTask">
+            <button class="btn btn-outline-secondary" type="button" (click)="saveTask()">Ajouter</button>
+        </div>
+    </div>
+    <div class="col-md-4 col-sm-12">
+        <table class="table">
+            <tbody>
+              <tr *ngFor="let task of tasks">
+                <td [class.completed]="task.completed" [class.uncompleted]="!task.completed">{{ task.text }}</td>
+                <td class="taskActions">
+                    <button class="btn btn-outline-secondary" type="button" (click)="completeTask(task)">  
+                        <i [ngClass]="{'bi bi-x-circle': task.completed, 'bi bi-check': !task.completed}"></i>
+                    </button>
+                    <button class="btn btn-outline-secondary" type="button" (click)="deleteTask(task)"><i class="bi bi-trash"></i></button>
+                </td>
+            </tbody>
+        </table>
+    </div>
+</div>
+

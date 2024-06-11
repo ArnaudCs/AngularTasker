@@ -1,0 +1,25 @@
+.main{
+    padding: 1em;
+}
+
+td{
+    vertical-align: middle;
+}
+
+.taskActions{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.completed {
+    text-decoration: line-through;
+}
+
+.uncompleted {
+    text-decoration: none;
+}
+
+.btn {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}

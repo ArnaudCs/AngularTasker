@@ -1,0 +1,35 @@
+body{
+    padding: 1em;
+}
+
+.navBar {
+    background-color: lightgrey;
+    border-radius: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    padding: 0.5em;
+}
+  
+.btnDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+  
+.navBtn{
+    background-color: orange;
+    border-radius: 1em;
+    padding: 0.5em;
+    margin-right: 1em;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+
+.logo{
+    width: 40px;
+    aspect-ratio: 1/1;
+}
