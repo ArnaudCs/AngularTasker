@@ -1,3 +1,32 @@
 .main{
+    padding: 1em 4em 1em 4em;
+}
+
+td{
+    vertical-align: middle;
+}
+
+.taskTable{
+    border-radius: 1em;
+    background-color: rgb(241, 241, 241);
     padding: 1em;
+}
+
+.taskActions{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #DE002D;
+}
+
+.uncompleted {
+    text-decoration: none;
+}
+
+.btn {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
 }

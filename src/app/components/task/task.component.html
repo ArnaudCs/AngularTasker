@@ -1,12 +1,17 @@
 <div class="main">
-    <h2>Vos tâches</h2>
-    <table class="table">
-        <tbody>
-          <tr>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>mdo</td>
-          </tr>
-        </tbody>
-    </table>
+    <h2>Vos tâches - {{ tasks.length }} tâches</h2>
+    <div class="taskTable">
+      <table class="table">
+          <tbody>
+            <tr *ngFor="let task of tasks">
+              <td [class.completed]="task.completed" [class.uncompleted]="!task.completed">{{ task.text }} ({{ getFormattedDate(task.createdAt) }})</td>
+              <td class="taskActions">
+                  <button class="btn btn-outline-secondary" type="button" (click)="completeTask(task)">  
+                      <i [ngClass]="{'bi bi-x-circle': task.completed, 'bi bi-check': !task.completed}"></i>
+                  </button>
+                  <button class="btn btn-outline-secondary" type="button" (click)="deleteTask(task)"><i class="bi bi-trash"></i></button>
+              </td>
+          </tbody>
+      </table>
+    </div>
 </div>

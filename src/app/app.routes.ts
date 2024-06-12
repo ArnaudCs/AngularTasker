@@ -5,6 +5,6 @@ import { TaskComponent } from './components/task/task.component';
 
 
 export const routes: Routes = [
-    { path: 'home', component: HomeComponent },
+    { path: '', component: HomeComponent },
     { path: 'tasks', component: TaskComponent },
 ];

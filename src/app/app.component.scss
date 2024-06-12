@@ -2,6 +2,10 @@ body{
     padding: 1em;
 }
 
+.main{
+    padding: 1em;
+}
+
 .navBar {
     background-color: lightgrey;
     border-radius: 1em;
@@ -20,13 +24,19 @@ body{
 }
   
 .navBtn{
-    background-color: orange;
+    background-color: #DE002D;
     border-radius: 1em;
     padding: 0.5em;
     margin-right: 1em;
     cursor: pointer;
     text-decoration: none;
     color: white;
+    transition: ease-in-out 0.2s;
+}
+
+.navBtn:hover{
+    background-color: white;
+    color: #DE002D;
 }
 
 .logo{

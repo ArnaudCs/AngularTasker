@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Tasker": {
+    "tasker": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -62,7 +62,13 @@
             "development": {
               "optimization": false,
               "extractLicenses": false,
-              "sourceMap": true
+              "sourceMap": true,
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.development.ts"
+                }
+              ]
             }
           },
           "defaultConfiguration": "production"
@@ -71,10 +77,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "Tasker:build:production"
+              "buildTarget": "tasker:build:production"
             },
             "development": {
-              "buildTarget": "Tasker:build:development"
+              "buildTarget": "tasker:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -82,7 +88,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "Tasker:build"
+            "buildTarget": "tasker:build"
           }
         },
         "test": {
